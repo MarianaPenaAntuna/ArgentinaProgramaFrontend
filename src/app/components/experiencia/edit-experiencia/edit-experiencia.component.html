@@ -1,0 +1,54 @@
+<section class="vh-150" style="background-color: #508bfc;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8">
+                <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+                        <h4>Actualice los datos que desee</h4>
+                        <form (ngSubmit)="onUpdate()" #f="ngForm"  novalidate >
+                            <h3 class="mb-5">EXPERIENCIA</h3>
+                            <div class="form-group">
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="lugarExperiencia" name="lugar"
+                                        class="form-control form-control-lg" placeholder="Ingrese empresa"
+                                        [(ngModel)]="expLab.lugar" required />
+                                    <label class="form-label" for="lugar">Nombre de la empresa</label>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="puestoExperiencia" name="puesto"
+                                        class="form-control form-control-lg" placeholder="Ingrese el puesto laboral"
+                                        [(ngModel)]="expLab.puesto" required />
+                                    <label class="form-label" for="puesto">Puesto laboral</label>
+                                </div>
+                             
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="imagenExperiencia" name="imagen"
+                                        class="form-control form-control-lg" placeholder="Ingrese logo de la empresa"
+                                        [(ngModel)]="expLab.imagen" required />
+                                    <label class="form-label" for="imagen">Logo de la empresa</label>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="fechaExperiencia" name="fecha"
+                                        class="form-control form-control-lg" placeholder="Ingrese periodo laboral"
+                                        [(ngModel)]="expLab.fecha" required />
+                                    <label class="form-label" for="fecha">Periodo laboral</label>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="descripcionExperiencia" name="descripcion"
+                                        class="form-control form-control-lg" placeholder="Ingrese la descripcion de tareas"
+                                        [(ngModel)]="expLab.descripcion" required />
+                                    <label class="form-label" for="descripcion">Tareas asociadas al puesto</label>
+                                </div>
+
+                              <button class="btn btn-primary btn-lg btn-block" >Editar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

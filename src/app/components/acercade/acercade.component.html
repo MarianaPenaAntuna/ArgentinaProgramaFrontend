@@ -1,0 +1,44 @@
+<section class="container-banner">
+  <div class="banner">
+    <div class="row" *ngFor="let Persona of perso">
+      <div class="animated-title">
+        <div class="text-top">
+          <div>
+            <span>{{Persona.nombre}} {{Persona.apellido}}</span>
+          </div>
+        </div>
+        <div class="text-bottom">
+          <div>Full Stack Jr.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="acercaDeMi p-5">
+  <div *ngFor="let Persona of perso">
+    <div class="edit-icons">
+      <button routerLink="/editarAcercade/{{Persona.id}}" *ngIf="isLogged"><i class="fa fa-pencil mx-1"
+          aria-hidden="true"></i></button>
+      <button (click)="delete(Persona.id)" *ngIf="isLogged"><i class="fa fa-trash" aria-hidden="true"
+          style="font-size:24px"></i></button>
+    </div>
+    <div class="row">
+      <div class="imagen col-12 col-sm-4">
+        <img [src]="Persona.imagen" id="perfilfoto" class="img-fluid" alt="foto de perfil">
+      </div>
+
+      <div class="text-acercaDeMi col-12 col-sm-8">
+        <h1>ACERCA DE MI</h1>
+        <p class="descripcion">{{Persona.descripcion}}</p>
+      </div>
+      <div class="col-12">
+        <div class="frase col-12">
+          <p><small>{{Persona.frase}}</small></p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

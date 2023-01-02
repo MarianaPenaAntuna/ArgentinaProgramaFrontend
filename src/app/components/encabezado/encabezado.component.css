@@ -1,0 +1,26 @@
+.container-header{
+    background-color:#A0BCC2;
+    padding: 0 3%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .container-header img{
+    height: 70px;
+  }
+  
+  .header-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .nav-social-icons i {
+   color: white;
+   padding: 10px;
+   justify-content: space-around;
+  }
+ 
+  
+ 

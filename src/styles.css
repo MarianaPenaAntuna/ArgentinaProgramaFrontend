@@ -1,0 +1,79 @@
+body{
+    padding: 1rem;
+  }
+  
+  .container-web{
+    display: grid;
+    grid-template-areas: 
+    "container-header"
+    "container-main";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
+ 
+  
+
+  @media (max-width:990px){
+    .header-nav{
+      flex-direction: column;
+    }
+  
+    .container-header{
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  .box-title{
+    font-family: 'Old Standard TT', serif;
+    background-color: #DAE5D0;
+  }
+  .text-title{
+    padding-top: 1rem;
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+  }
+  
+  .text-title p{
+  background-color: #A0BCC2;
+  }
+  
+  .card-list{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0%;
+  }
+  
+  .item-list{
+    list-style: none;
+    border-radius: 32px;
+    border-color:#DAE5D0;
+    border-style: double;
+    border-width: 5px;
+    background-color: #FEFBE7;
+    margin-bottom: 1rem;
+    padding: 5px 5px;
+  }
+  
+  .item-head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .item-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .item-img img{
+    width: 12rem;
+    padding: 1rem 1rem;
+  }
+  
+  .item-texto{
+    font-size: 20px;
+    padding: 1rem 1rem;
+  }
+  

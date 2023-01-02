@@ -1,0 +1,48 @@
+<section class="vh-150" style="background-color: #508bfc;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8">
+                <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+                        <h4> Por favor, modifique los datos que desee</h4>
+                        <form (ngSubmit)="onUpdate()" #f="ngForm"  novalidate>
+                            <h3 class="mb-5">PROYECTO</h3>
+                            <div class="form-group">
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="nombreProyecto" name="nombre"
+                                        class="form-control form-control-lg" placeholder="Ingrese nombre del proyecto realizado"
+                                        [(ngModel)]="proyEdit.nombre" required/>
+                                    <label class="form-label" for="nombre">Nombre del proyecto</label>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="descripcionProyecto" name="descripcion"
+                                        class="form-control form-control-lg" placeholder="Ingrese la descripcion del proyecto"
+                                        [(ngModel)]="proyEdit.descripcion" required />
+                                    <label class="form-label" for="descripcion">Breve descripcion del proyecto</label>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="fechaProyecto" name="fecha"
+                                        class="form-control form-control-lg" placeholder="Ingrese fecha del proyecto"
+                                        [(ngModel)]="proyEdit.fecha" required />
+                                    <label class="form-label" for="fecha">Fecha de realizacion del proyecto</label>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="linkProyecto" name="link"
+                                        class="form-control form-control-lg" placeholder="Ingrese el link del proyecto"
+                                        [(ngModel)]="proyEdit.link" required />
+                                    <label class="form-label" for="link">Link de acceso al proyecto</label>
+                                </div>
+
+                                <button class="btn btn-primary btn-lg btn-block" type="submit">Editar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

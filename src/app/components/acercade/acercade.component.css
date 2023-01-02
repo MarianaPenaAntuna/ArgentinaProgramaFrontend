@@ -1,0 +1,105 @@
+.container-banner{
+    grid-area: container-banner;
+  }
+  
+  .banner{
+    background-image: url(../../../assets/banner/cerebro.jpg);
+    background-size: cover;
+    height: 500px;
+    width: 100%; 
+    display: flex;
+  }
+  
+
+ #perfilfoto {
+      height: 300px;
+      width: 300px; 
+      padding: 10%;
+      border-radius: 125px;
+      vertical-align: middle;
+    }
+  
+  @media (max-width:970px){
+      .acercaDeMi{
+          display: flex;
+          flex-direction: column;
+      }
+  }
+
+
+  
+  @keyframes showTopText {
+    0% { transform: translate3d(0, 100%, 0); }
+    40%, 60% { transform: translate3d(0, 50%, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+  }
+  @keyframes showBottomText {
+    0% { transform: translate3d(0, -100%, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+  }
+  .animated-title {
+    padding-left: 30%;
+    color: #222;
+    font-family: Arial, sans-serif;
+    opacity: 1;
+    height: 90vmin;
+    left: 100px;
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200%;
+
+  }
+  .animated-title > div {
+    height: 50%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  .animated-title > div div {
+    font-size: 40px;
+    padding: 2vmin 0;
+    position: relative;
+    top: 55%;
+  }
+  .animated-title > div div span {
+    display: block;
+
+  }
+  .animated-title > div.text-top {
+    border-bottom: 1vmin solid rgb(0, 0, 0);
+    top: 0;
+    position: relative;
+  }
+  .animated-title > div.text-top div {
+    animation: showTopText 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    bottom: 0;
+    transform: translate(0, 100%);
+  }
+  .animated-title > div.text-top div span:first-child {
+    color: #767676;
+  }
+  .animated-title > div.text-bottom {
+    bottom: 0;
+  }
+  .animated-title > div.text-bottom div {
+    animation: showBottomText 0.5s;
+    animation-delay: 1.75s;
+    animation-fill-mode: forwards;
+    top: 0;
+    transform: translate(0, -100%);
+  }
+
+  @media (max-width:990px){
+    .animated-title {
+        height: auto;
+        top: 20%;
+    }
+  
+    .animated-title > div div {
+      font-size: 26px;
+      top: 65%;
+  }
+}

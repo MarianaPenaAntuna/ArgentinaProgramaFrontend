@@ -1,0 +1,9 @@
+<div class="nav-login">
+  <button class="btn" (click)="login()" *ngIf="!isLogged">
+    Login
+  </button>
+
+  <button class="btn" (click)="onLogOut()" *ngIf="isLogged">
+    Cerrar Sesión
+  </button>
+</div>

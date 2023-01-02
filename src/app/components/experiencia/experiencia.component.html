@@ -1,0 +1,49 @@
+<section>
+    <div class="box-title">
+        <div class="text-title">
+            <p>Experiencia</p>
+            <button type="button" class="btn btn-outline-secondary" style="height: 60px;" routerLink="/nuevaExperiencia"
+                *ngIf="isLogged">Agregar Experiencia</button>
+        </div>
+
+        <div class="list">
+            <ul class="card-list">
+                <li *ngFor="let Experiencia of expe" class="item-list">
+                    <div class="item-head">
+                        <div class="item-name">
+                            <h3></h3>
+                        </div>
+                        <div class="edit-icons">
+                            <button routerLink="/editarExperiencia/{{Experiencia.id}}" *ngIf="isLogged"><i
+                                    class="fa fa-pencil mx-1" aria-hidden="true"></i></button>
+                            <button (click)="delete(Experiencia.id)" *ngIf="isLogged"><i class="fa fa-trash"
+                                    aria-hidden="true" style="font-size:24px"></i></button>
+                        </div>
+                    </div>
+                    <div class="item-content row mx-5">
+                        <div class="item-img col-12 col-sm-4">
+                            <img [src]="Experiencia.imagen">
+                        </div>
+                        <div class="item-texto col-12 col-sm-8">
+                            <div class="lugar">
+                                <h3>{{Experiencia.lugar}}</h3>
+                            </div>
+                            <div class="item-texto">
+                                <div class="puesto">
+                                    <p>{{Experiencia.puesto}}</p>
+                                </div>
+                                <div class="descripcion">
+                                    <p>{{Experiencia.descripcion}}</p>
+                                </div>
+                                <div class="periodo">
+                                    <p>{{Experiencia.fecha}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

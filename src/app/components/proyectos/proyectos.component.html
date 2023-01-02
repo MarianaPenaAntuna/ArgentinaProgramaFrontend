@@ -1,0 +1,31 @@
+<section>
+    <div class="box-title">
+        <div class="text-title">
+            <p>Proyectos</p>
+            <button type="button" class="btn btn-outline-secondary" style="height: 60px;" routerLink="/nuevoProyecto" *ngIf="isLogged">Agregar Proyecto</button>
+        </div>
+
+        <div class="list">
+            <ul class="card-list">
+                <li *ngFor="let Proyecto of proy" class="item-list">
+                    <div class="item-head">
+                        <div class="item-name">
+                            <h3></h3>
+                        </div>
+                        <div class="edit-icons">
+                            <button routerLink="/editarProyecto/{{Proyecto.id}}" *ngIf="isLogged"><i  class="fa fa-pencil mx-1" aria-hidden="true"></i></button>
+                            <button (click)="delete(Proyecto.id)" *ngIf="isLogged"><i class="fa fa-trash" aria-hidden="true" style="font-size:24px"></i></button>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <div class="card-body">
+                            <h5 class="card-title">{{Proyecto.nombre}} - {{Proyecto.fecha}}</h5>
+                            <p class="card-text">{{Proyecto.descripcion}}</p>
+                            <a href="{{Proyecto.link}}" target="_blank" class="btn btn-primary">{{Proyecto.link}}</a>
+                        </div>
+                     </div>   
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

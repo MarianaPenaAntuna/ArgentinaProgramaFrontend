@@ -1,0 +1,33 @@
+<section class="vh-100" style="background-color: #508bfc;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+            <h4> Por favor, ingrese nombre de usuario y contraseña</h4>
+            <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+              <h3 class="mb-5">LOGIN</h3>
+
+              <div class="form-outline mb-4">
+                <input type="text" id="nombreUsuario" name="nombreUsuario" class="form-control form-control-lg"
+                  placeholder="Ingrese nombre de Usuario" [(ngModel)]="nombreUsuario" required/>
+                <label class="form-label" for="nombreUsuario">Nombre de usuario</label>
+              </div>
+
+              <div class="form-outline mb-4">
+                <input type="password" id="password" name="password" class="form-control form-control-lg" placeholder="Ingrese password"
+                  [(ngModel)]="password" required/>
+                <label class="form-label" for="password" >Password</label>
+              </div>
+              <div>
+                <p class="mb-5">¿Desea abrir una cuenta? <a href="#!" class="text-white-50 fw-bold">Sign Up</a>
+                </p>
+              </div>
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,54 @@
+<section class="vh-150" style="background-color: #508bfc;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8">
+                <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+                        <h4> Por favor, ingrese los datos a agregar</h4>
+                        <form (ngSubmit)="onCreate()" #f="ngForm"  novalidate>
+                            <h3 class="mb-5">DATOS PERSONALES</h3>
+                            <div class="form-group">
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="nombrePersona" name="nombre"
+                                        class="form-control form-control-lg" placeholder="Ingrese su nombre"
+                                        [(ngModel)]="nombre" required/>
+                                    <label class="form-label" for="nombre">Nombre de la persona</label>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="apellidoPersona" name="apellido"
+                                        class="form-control form-control-lg" placeholder="Ingrese el apellido"
+                                        [(ngModel)]="apellido" required />
+                                    <label class="form-label" for="apellido">Apellido de la persona</label>
+                                </div>
+                             
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="imagenPersona" name="imagen"
+                                        class="form-control form-control-lg" placeholder="Ingrese imagen de perfil"
+                                        [(ngModel)]="imagen" required />
+                                    <label class="form-label" for="imagen">Imagen de perfil</label>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="descripcionPersona" name="descripcion"
+                                        class="form-control form-control-lg" placeholder="Ingrese una breve desripcion acerca de Ud."
+                                        [(ngModel)]="descripcion" required />
+                                    <label class="form-label" for="descripcion">Breve descripcion acerca suyo</label>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="frasePersona" name="frase"
+                                        class="form-control form-control-lg" placeholder="Ingrese una frase que lo identifique"
+                                        [(ngModel)]="frase" required />
+                                    <label class="form-label" for="frase">Frase que lo represente</label>
+                                </div>
+
+                                <button class="btn btn-primary btn-lg btn-block" type="submit">Agregar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

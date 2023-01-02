@@ -1,0 +1,56 @@
+
+    <section class="vh-150" style="background-color: #508bfc;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8">
+                    <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+                            <h4> Por favor, actualice los datos que desee</h4>
+                            <form (ngSubmit)="onUpdate()" #f="ngForm"  novalidate >
+                                <h3 class="mb-5">EDUCACION</h3>
+                                <div class="form-group">
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="lugarEducacion" name="lugar"
+                                            class="form-control form-control-lg" placeholder="Ingrese nombre de la institución"
+                                            [(ngModel)]="eduEdit.lugar" required/>
+                                        <label class="form-label" for="lugar">Nombre de la institucion educativa</label>
+                                    </div>
+    
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="curso" name="curso"
+                                            class="form-control form-control-lg" placeholder="Ingrese el curso realizado"
+                                            [(ngModel)]="eduEdit.curso" required />
+                                        <label class="form-label" for="curso">Nombre del curso realizado</label>
+                                    </div>
+                                 
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="imagenEducacion" name="imagen"
+                                            class="form-control form-control-lg" placeholder="Ingrese logo de la institucion educativa"
+                                            [(ngModel)]="eduEdit.imagen" required />
+                                        <label class="form-label" for="imagen">Logo de la institucion educativa</label>
+                                    </div>
+    
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="fechaEducacion" name="fecha"
+                                            class="form-control form-control-lg" placeholder="Ingrese periodo cursado"
+                                            [(ngModel)]="eduEdit.fecha" required />
+                                        <label class="form-label" for="fecha">Periodo cursado</label>
+                                    </div>
+    
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="descripcionEducacion" name="descripcion"
+                                            class="form-control form-control-lg" placeholder="Ingrese la descripcion del curso"
+                                            [(ngModel)]="eduEdit.descripcion" required />
+                                        <label class="form-label" for="descripcion">descripcion del curso</label>
+                                    </div>
+    
+                                    <button class="btn btn-primary btn-lg btn-block" type="submit">Editar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
